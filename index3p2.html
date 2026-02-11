@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>F1 Pit Wall Dashboard</title>
+    <link rel="stylesheet" href="style3p2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div id="dashboard" class="container">
+        <h1 id="main-title">F1 Team Dashboard</h1>
+        
+        <div class="driver-card" id="card-1">
+            <img id="car-image" src="images.jpg" alt="F1 Car" width="300">
+            <h2 class="driver-name">Max Verstappen</h2>
+            <p class="status">Status: P1</p>
+        </div>
+
+        <div class="controls">
+            <button id="change-car-btn" onclick="updateCar()">Swap Car Image</button>
+            <button id="move-btn" onclick="moveCard()">Change Position</button>
+            <button id="add-note-btn" onclick="addNote()">Add Strategy Note</button>
+            <button id="delete-btn" onclick="removeNote()">Clear Last Note</button>
+            <button id="jq-style-btn">Apply jQuery Theme</button>
+        </div>
+
+        <div class="form-section">
+            <input type="text" id="driverInput" placeholder="Enter New Driver Name">
+            <button id="update-driver-btn">Update Driver</button>
+        </div>
+
+        <ul id="strategy-list">
+            <li>Check tire wear (Lap 20)</li>
+        </ul>
+    </div>
+
+    <script src="script3p2.js"></script>
+</body>
+</html>
